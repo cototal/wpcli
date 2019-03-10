@@ -1,0 +1,16 @@
+version: "3"
+services:
+  wp:
+    build: .
+    image: polysphere/wpcli:5
+    ports:
+      - 8010:80
+      - 4430:443
+    env_file:
+      - wp.env
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
+networks:
+  default:
+    external:
+      name: services
