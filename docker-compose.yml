@@ -2,12 +2,13 @@ version: "3"
 services:
   wp:
     build: .
-    image: polysphere/wpcli:5
     ports:
       - 8010:80
       - 4430:443
     env_file:
       - wp.env
+    environment:
+      - "CUSTOM_HTA=${HTA2}"
     volumes:
       - ./wp-content:/var/www/html/wp-content
 networks:
