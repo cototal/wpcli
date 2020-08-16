@@ -27,3 +27,16 @@ If using the Docker command, just set it with the `-e` option. Remember to put d
 ```
 docker run -e CUSTOM_HTA="$HTA1"
 ```
+
+## wp.env
+
+Example:
+
+```
+WORDPRESS_DB_HOST=mysql
+WORDPRESS_DB_USER=mysqluser
+WORDPRESS_DB_PASSWORD=mysqlpassword
+WORDPRESS_DB_NAME=docker_wordpress
+WORDPRESS_TABLE_PREFIX=docker_wordpress
+WORDPRESS_DEBUG=0
+```
