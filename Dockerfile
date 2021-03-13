@@ -1,4 +1,4 @@
-FROM wordpress:5.4
+FROM wordpress:5.7
 
 ENV TZ=America/Chicago
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
